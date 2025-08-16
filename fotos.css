@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Segoe+UI&display=swap');
+@import url('"https://fonts.googleapis.com/css2?family=Pacifico&display=swap"');
 
 body {
     margin: 0;
@@ -21,7 +21,7 @@ body {
     color: #a52a94;
     font-size: 1.8em;
     width: 100%;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .cabecalho p {
@@ -42,11 +42,12 @@ body {
     perspective: 2000px;
     position: relative;
     margin: auto;
-    border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 15px 40px rgba(68, 28, 209, 0.2);
     background-color: #fff0fb;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
 }
+
 
 .spread {
     width: 100%;
@@ -136,12 +137,14 @@ button {
     color: white;
     border-radius: 5px;
     cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    transition: background 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
 }
 
 button:hover {
     background-color: #a05b9a;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .flipped {
@@ -170,6 +173,8 @@ button:hover {
     opacity: 0.6;
     pointer-events: none;
     z-index: 999;
+    opacity: 0.3;
+    filter: blur(0.5px);
 }
 
 @keyframes flutuar {
@@ -177,9 +182,11 @@ button:hover {
         transform: translateY(0) rotate(0deg);
         opacity: 0.6;
     }
+
     50% {
         opacity: 1;
     }
+
     100% {
         transform: translateY(100vh) rotate(360deg);
         opacity: 0;
