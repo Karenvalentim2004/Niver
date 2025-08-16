@@ -26,3 +26,19 @@ function prevPage() {
 }
 
 showSpread(currentSpread);
+
+
+
+    const floquinhos = document.querySelector('.floquinhos');
+
+    for (let i = 0; i < 20; i++) {
+        const el = document.createElement('div');
+        el.textContent = ['💖', '✨', '💫', '🌟', '🥳', '🎉'][Math.floor(Math.random() * 4)];
+        el.style.left = `${Math.random() * 100}vw`;
+        el.style.fontSize = `${Math.random() * 15 + 10}px`;
+        el.style.animationDuration = `${5 + Math.random() * 5}s`;
+        floquinhos.appendChild(el);
+    }
+
+
+
